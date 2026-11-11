@@ -1,0 +1,92 @@
+/* =========================================================
+   Remas's Famous Chicken  ·  media.css
+   Desktop-first. Breakpoints: 1200 / 992 / 768 / 576 / 400
+   (swap these numbers for your usual set if they differ)
+   ========================================================= */
+
+/* ---------- 1200px: small laptops ---------- */
+@media (max-width: 1200px) {
+  :root { --band: 18px; --ring: 150px; --ring-band: 11px; }
+  .nav-list a { padding: 8px 10px; font-size: 13px; }
+  .site-nav { gap: 14px; }
+}
+
+/* ---------- 992px: tablets, landscape ---------- */
+@media (max-width: 992px) {
+  :root { --band: 15px; --ring: 132px; --ring-band: 10px; --header-h: 68px; }
+
+  .nav-toggle { display: flex; }
+  .site-nav {
+    display: none;
+    position: absolute; left: 0; right: 0; top: 100%;
+    flex-direction: column; align-items: stretch; gap: 14px;
+    padding: 18px var(--gutter) 24px;
+    background: var(--cream); border-bottom: 5px solid var(--black);
+  }
+  .site-nav.open { display: flex; }
+  .nav-list { flex-direction: column; align-items: stretch; gap: 2px; }
+  .nav-list a { padding: 13px 14px; font-size: 17px; border-radius: 14px; }
+
+  .hero { min-height: 0; }
+  .hero-frame { --r: 130px; }
+  .hero-dot--a { width: 300px; height: 300px; }
+
+  .ticket { position: static; max-width: none; }
+}
+
+/* ---------- 768px: tablets, portrait ---------- */
+@media (max-width: 768px) {
+  :root { --band: 12px; --ring: 112px; --ring-band: 8px; --radius: 20px; }
+  body { font-size: 16px; }
+
+  .hero-frame { --r: 96px; }
+  .ring-link--low { margin-top: 0; }
+  .rings { justify-content: center; }
+  .ring-label { font-size: 12px; letter-spacing: 0.14em; }
+  .speech::after { display: none; }
+
+  .fav { box-shadow: 6px 6px 0 var(--pink); }
+  .ticket { box-shadow: 6px 6px 0 var(--pink); }
+  .main-opt { flex: 1 1 160px; }
+}
+
+/* ---------- 576px: large phones ---------- */
+@media (max-width: 576px) {
+  :root { --band: 9px; --ring: 66px; --ring-band: 5px; --ring-gap: 3px; --header-h: 62px; }
+
+  .brand-big { font-size: 25px; }
+  .brand-small { font-size: 9px; }
+  .nav-toggle-text { display: none; }
+  .nav-toggle { padding: 13px 14px; }
+
+  .hero-frame { --r: 64px; }
+  .hero-title { text-shadow: 3px 3px 0 var(--yellow), 6px 6px 0 var(--orange); }
+  .hero-dot--b { display: none; }
+  .rings { gap: 0; flex-wrap: nowrap; justify-content: space-between; }
+  .ring-label { font-size: 10px; letter-spacing: 0.08em; max-width: 96px; text-align: center; }
+  .legend { flex: 1 1 100%; }
+
+  .menu-card h3, .fav-body h3 { font-size: 24px; }
+  .menu-list, .chip-list { padding-left: 16px; padding-right: 16px; }
+  .menu-note { padding-left: 16px; padding-right: 16px; }
+
+  .step--add .btn { flex: 1 1 auto; }
+  .ticket-actions .btn { flex: 1 1 100%; }
+  .line { flex-wrap: wrap; }
+
+  .footer-links { flex: 1 1 140px; }
+}
+
+/* ---------- 400px: small phones ---------- */
+@media (max-width: 400px) {
+  :root { --band: 7px; --ring: 58px; --ring-band: 4px; --gutter: 14px; }
+
+  .hero-frame { --r: 48px; }
+  .speech { padding: 14px 16px; border-width: 5px; }
+  .btn { padding: 13px 18px; font-size: 13px; letter-spacing: 0.06em; }
+  .opt { padding: 9px 12px; font-size: 12px; }
+  .main-opt { flex: 1 1 100%; }
+  .mi-dots { display: none; }
+  .menu-item { justify-content: space-between; }
+  .fav-price, .ticket-total-num { font-size: 28px; }
+}
