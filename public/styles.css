@@ -445,8 +445,8 @@ button { font-family: inherit; }
 .footer-brand .brand-small { color: var(--yellow); margin-top: 6px; }
 .footer-brand p { margin-top: 16px; color: rgba(255, 253, 242, 0.75); }
 .footer-links { flex: 0 1 200px; display: flex; flex-direction: column; gap: 10px; }
-.footer-links a { text-decoration: none; font-weight: 700; }
-.footer-links a:hover { color: var(--yellow); text-decoration: underline; }
+.footer-links a, .footer-base a { text-decoration: none; font-weight: 700; }
+.footer-links a:hover, .footer-base a:hover { color: var(--yellow); text-decoration: underline; text-underline-offset: 0.5rem; }
 .footer-base {
   display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px;
   padding-top: 20px; padding-bottom: 28px;
